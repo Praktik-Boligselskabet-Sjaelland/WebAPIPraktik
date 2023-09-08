@@ -6,4 +6,20 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="Pages\Paavirkning.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Pages\Paavirkning.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Pages\Paavirkning.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Pages\Paavirkning.cshtml" />
+  </ItemGroup>
+
 </Project>
