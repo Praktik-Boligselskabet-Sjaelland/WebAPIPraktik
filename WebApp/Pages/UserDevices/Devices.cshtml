@@ -10,3 +10,32 @@
     <a href="https://www.nettopower.dk/elapparater/vaskemaskine/" target="_blank">link til vaskemaskine forbrug</a>
 </div>
 
+<h2>Dine Tilføjede maskiner</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Effect</th>
+            <th>Runtime</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        @foreach (var item in @Model.Devices)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Description</td>
+                <td>@item.Effect</td>
+                <td>@item.RunTime</td>
+            </tr>
+        }
+        
+    </tbody>
+</table>
+
+
+
