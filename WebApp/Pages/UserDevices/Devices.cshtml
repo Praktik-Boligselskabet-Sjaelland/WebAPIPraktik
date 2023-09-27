@@ -23,14 +23,14 @@
     </thead>
     <tbody>
         
-        @foreach (var item in @Model.Devices)
+        @foreach (var device in @Model.Devices)
         {
             <tr>
-                <td>@item.Id</td>
-                <td>@item.Name</td>
-                <td>@item.Description</td>
-                <td>@item.Effect</td>
-                <td>@item.RunTime</td>
+                <td>@device.Id</td>
+                <td>@device.Name</td>
+                <td>@device.Description</td>
+                <td>@device.Effect</td>
+                <td>@device.RunTime</td>
             </tr>
         }
         

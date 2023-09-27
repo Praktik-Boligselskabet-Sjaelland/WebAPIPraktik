@@ -11,7 +11,7 @@ namespace WebApp.Services
 
         public DeviceService() 
         {
-            _devices = FakeDeviceRepository.GetDevices();
+            _devices = FakeDeviceRepository.GetFakeDevices();
             nextId= nextId + 1;
         }
         public Device Create(Device newDevice)
@@ -29,7 +29,7 @@ namespace WebApp.Services
             throw new NotImplementedException();
         }
 
-        public List<Device> GetDevices()
+        public List<Device> GetAll()
         {
             return new List<Device>(_devices);
         }

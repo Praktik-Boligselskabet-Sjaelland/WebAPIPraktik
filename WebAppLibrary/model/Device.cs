@@ -16,6 +16,10 @@ namespace WebAppLibrary.model
 
         public Device()
         {
+            _id = 0;
+            _name = string.Empty;
+            _description= string.Empty;
+            _effect = 0;
         }
 
         public Device(int id, string name, string description, int effect, decimal runeTime)

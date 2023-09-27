@@ -4,7 +4,7 @@ namespace WebApp.Services
 {
     public interface IDeviceService
     {
-        List<Device> GetDevices();
+        List<Device> GetAll();
         Device GetById(int id);
         Device Create(Device newDevice);
         Device Delete(int id);

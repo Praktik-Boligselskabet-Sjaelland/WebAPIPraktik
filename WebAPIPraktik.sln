@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAPIPraktik", "WebAPIPrak
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebApp", "WebApp\WebApp.csproj", "{10C795BA-F805-41D5-B91F-67DEBA05F204}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebAppLibrary", "WebAppLibrary\WebAppLibrary.csproj", "{A09DD127-5012-4C48-AB63-7E0837153736}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebAppLibrary", "WebAppLibrary\WebAppLibrary.csproj", "{A09DD127-5012-4C48-AB63-7E0837153736}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

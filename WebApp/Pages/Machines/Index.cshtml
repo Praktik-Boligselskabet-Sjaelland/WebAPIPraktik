@@ -1,0 +1,30 @@
+﻿@page
+@model WebApp.Pages.Machines.IndexModel
+@{
+    ViewData["title"] = "Maskiner og strømforbrug";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Effect</th>
+            <th>Runtime</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var dev in Model.Devices)
+        {
+            <tr>
+                <td>@dev.Id</td>
+                <td>@dev.Name</td>
+                <td>@dev.Description</td>
+                <td>@dev.Effect</td>
+                <td>@dev.RunTime</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

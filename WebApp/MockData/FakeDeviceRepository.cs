@@ -22,7 +22,7 @@ namespace WebApp.Models
 
         };
 
-        public static List<Device> GetDevices()
+        public static List<Device> GetFakeDevices()
         {
             return new List<Device>(_devices);
         }
