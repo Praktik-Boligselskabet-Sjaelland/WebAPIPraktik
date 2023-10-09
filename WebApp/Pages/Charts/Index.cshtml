@@ -3,59 +3,79 @@
 @{
     ViewData["Title"] = "Charts";
 }
-
-<div style="width: 100%">
-    <div style="width: 33%; float: left;" class="row">
-        Last 30 days
-        <canvas class="my-4 col" id="pieChart"></canvas>
+<html>
+<head>
+</head>
+<body>
+    <div class="text-left">
+        <h1 class="display-4">
+            Charts
+        </h1>
+        <br/>
+        <h2 class="text-left">
+            Power Usage
+        </h2>
+        <hr/>
     </div>
-    <div style="width: 67%; height: 30%; float: right;" class="row">
-        Previous 3 months
-        <canvas class="my-4 col" id="barChart"></canvas>
 
+
+    <div>
+        <div style="width: 100%">
+            <div style="width: 30%; float: left;" class="row">
+                <h3 class="text-left">Last 30 days</h3>
+                <canvas class="my-4 col" id="pieChart" style="border: 1px solid black;"></canvas>
+            </div>
+            <div style="width: 60%; height: 20%; float: right;" class="row">
+                <h3 class="text-left">
+                    Previous 3 months
+                </h3>
+                <canvas class="my-4 col" id="barChart" style="border: 1px solid black;"></canvas>
+            </div>
+        </div>
     </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<script>
-  const ctx = document.getElementById('pieChart');
-  const pChart = document.getElementById('barChart')
+    <script>
+        const ctx = document.getElementById('pieChart');
+        const pChart = document.getElementById('barChart')
 
-  new Chart(ctx, {
-    type: 'pie',
-    data: {
-      labels: ['kW/h - Used', 'kW/h - Generated'],
-      datasets: [{
-                label: 'kW/h',
-        data: [120, 190],
-        borderWidth: 1
-      }]
-    },
-    options: {
-      scales: {
-        y: {
-          beginAtZero: true
-        }
-      }
-    }
-  });
-    new Chart(pChart, {
-        type: 'bar',
-        data: {
-            labels: ['Used 2023/06', 'Generated 2023/06', 'Used 2023/07', 'Generated 2023/07', 'Used 2023/08', 'Generated 2023/08'],
-            datasets: [{
-                label: 'kW/h',
-                data: [320, 231, 354, 521, 207, 348],
-                borderWidth: 1
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
+        new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['kW/h - Used', 'kW/h - Generated'],
+                datasets: [{
+                    label: 'kW/h',
+                    data: [120, 190],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
                 }
             }
-        }
-    });
-</script>
+        });
+        new Chart(pChart, {
+            type: 'bar',
+            data: {
+                labels: ['Used 2023/06', 'Generated 2023/06', 'Used 2023/07', 'Generated 2023/07', 'Used 2023/08', 'Generated 2023/08'],
+                datasets: [{
+                    label: 'kW/h',
+                    data: [320, 231, 354, 521, 207, 348],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>

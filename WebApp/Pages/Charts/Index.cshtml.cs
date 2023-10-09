@@ -1,5 +1,4 @@
 using ChartExample.Models.Chart;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 

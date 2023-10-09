@@ -9,10 +9,10 @@ namespace WebApp.Services
         private readonly List<Device> _devices;
         private static int nextId = 0;
 
-        public DeviceService() 
+        public DeviceService()
         {
             _devices = FakeDeviceRepository.GetFakeDevices();
-            nextId= nextId + 1;
+            nextId = nextId + 1;
         }
         public Device Create(Device newDevice)
         {
