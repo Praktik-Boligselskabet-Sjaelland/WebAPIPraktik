@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WebAppLibrary.model
+﻿namespace WebAppLibrary.model
 {
     public class Device
     {
@@ -20,7 +14,7 @@ namespace WebAppLibrary.model
         {
             _id = 0;
             _name = string.Empty;
-            _description= string.Empty;
+            _description = string.Empty;
             _effect = 0;
         }
 
@@ -49,19 +43,19 @@ namespace WebAppLibrary.model
         public string Description
         {
             get => _description;
-            set=> _description = value;
+            set => _description = value;
         }
 
         public int Effect
         {
             get => _effect;
-            set=> _effect = value;
+            set => _effect = value;
         }
 
         public decimal RunTime
         {
             get => _runeTime;
-            set=> _runeTime = value;
+            set => _runeTime = value;
         }
 
         public double RunTimeHour

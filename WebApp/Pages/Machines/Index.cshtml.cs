@@ -1,4 +1,3 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using WebApp.Services;
 using WebAppLibrary.model;
@@ -10,7 +9,7 @@ namespace WebApp.Pages.Machines
         private IDeviceService _deviceService;
 
         public List<Device> Devices { get; set; }
-       
+
         public IndexModel(IDeviceService deviceService)
         {
             _deviceService = deviceService;
