@@ -16,7 +16,10 @@ namespace WebApp.Services
         }
         public Device Create(Device newDevice)
         {
-            throw new NotImplementedException();
+            newDevice.Id = nextId;
+            _devices.Add(newDevice);
+
+            return newDevice;
         }
 
         public Device Delete(int id)
