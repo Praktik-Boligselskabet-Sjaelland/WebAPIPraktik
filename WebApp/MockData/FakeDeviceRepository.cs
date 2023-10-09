@@ -16,9 +16,9 @@ namespace WebApp.Models
 
         private static List<Device> _devices = new List<Device>()
         {
-            new Device( 1, "Vaskemaskine", "Bosh", 23,  7000),
-            new Device(2, "Elbil", "Tesla", 23, 7000),
-            new Device(3, "Gamer PC", "Stationer computer", 23, 7000)
+            new Device( 1, "Vaskemaskine", "Bosh", 23,  7000, 1.9),
+            new Device(2, "Elbil", "Tesla", 23, 7000, 1.9),
+            new Device(3, "Gamer PC", "Stationer computer", 23, 7000, 1.9)
 
         };
 
