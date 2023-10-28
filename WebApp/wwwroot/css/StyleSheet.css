@@ -1,7 +1,21 @@
 ﻿body {
-    background-color: cornsilk;
+    background: rgba(255,248,220,0.7);
+}
+
+header {
+    background: rgba(255,248,220,1);
+}
+
+li {
+    background: rgba(255,248,220,0.7);
+}
+
+ul {
+    background: rgba(255,248,220,0.7);
 }
 
 h1 {
-    background-color: lightblue;
+    background: rgba(255,248,220,0.7);
+    color: black;
+    opacity: 1;
 }
