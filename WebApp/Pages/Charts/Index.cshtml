@@ -5,6 +5,26 @@
 }
 <html>
 <head>
+    <style>
+            .table__container {
+                width: calc(100% + 24px);
+                margin-top: 20px;
+                margin-left: -12px;
+                margin-right: -12px;
+            }
+
+            .table__container table {
+                width: 100%;
+            }
+
+            .table__container table th {
+                border: 2px solid black
+            }
+
+            .table__container table td {
+                border: 1px solid black
+            }
+    </style>
 </head>
 <body>
     <div class="text-left">
@@ -20,17 +40,57 @@
 
 
     <div>
-        <div style="width: 100%">
-            <div style="width: 30%; float: left;" class="row">
+        <div style="width: 100%; display: flex; justify-content: space-between;">
+            <div style="width: 30%;" class="row">
                 <h3 class="text-left">Last 30 days</h3>
-                <canvas class="my-4 col" id="pieChart" style="border: 1px solid black;"></canvas>
+                <canvas id="pieChart" style="
+                border: 1px solid black;"></canvas>
             </div>
-            <div style="width: 60%; height: 20%; float: right;" class="row">
+            <div style="width: 60%; height: 20%;" class="row">
                 <h3 class="text-left">
                     Previous 3 months
                 </h3>
-                <canvas class="my-4 col" id="barChart" style="border: 1px solid black;"></canvas>
+                <canvas id="barChart" style="
+                    border: 1px solid black;"
+                ></canvas>
             </div>
+        </div>
+        <div class="table__container">
+            Monthly Breakdown
+               <table>
+                   <thead>
+                   <th>Usage</th>
+                   <th>Generation</th>
+                   <th>Difference</th>
+                   <th>Total</th>
+                   </thead>
+                   <tbody>
+                   <tr>
+                       <td>1</td>
+                       <td>2</td>
+                       <td>3</td>
+                       <td>4</td>
+                   </tr>
+                   <tr>
+                       <td>1</td>
+                       <td>2</td>
+                       <td>3</td>
+                       <td>4</td>
+                   </tr>
+                   <tr>
+                       <td>1</td>
+                       <td>2</td>
+                       <td>3</td>
+                       <td>4</td>
+                   </tr>
+                   <tr>
+                       <td>1</td>
+                       <td>2</td>
+                       <td>3</td>
+                       <td>4</td>
+                   </tr>
+                   </tbody>
+               </table>
         </div>
     </div>
 
