@@ -1,4 +1,7 @@
 using WebApp.Services;
+using Microsoft.Extensions.Configuration;
+using System.IO;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -6,6 +9,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 builder.Services.AddSingleton<IDeviceService, DeviceService>();
+
+//builder.Services.AddTransient<IUserService, UserService>();
+
+//builder.Services.AddTransient<IPowerUseService, PowerUseService>();
+
+builder.Services.AddDbContext<DbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("BOSJ"));
+});
 
 var app = builder.Build();
 

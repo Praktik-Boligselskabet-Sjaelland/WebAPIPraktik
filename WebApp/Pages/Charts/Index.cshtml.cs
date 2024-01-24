@@ -1,4 +1,5 @@
 using ChartExample.Models.Chart;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
 
@@ -6,6 +7,8 @@ namespace WebApp.Pages.Charts
 {
     public class IndexModel : PageModel
     {
+        [BindProperty(SupportsGet = true)]
+
         public ChartJs Chart { get; set; }
         public string ChartJson { get; set; }
 
@@ -67,6 +70,8 @@ namespace WebApp.Pages.Charts
             {
                 NullValueHandling = NullValueHandling.Ignore,
             });
+
+
         }
     }
 }
