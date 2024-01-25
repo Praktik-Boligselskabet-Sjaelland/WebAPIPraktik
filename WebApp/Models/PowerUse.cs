@@ -2,6 +2,7 @@
 {
     public class PowerUse
     {
+        public int Use_Id { get; set; }
         public DateTime Period { get; set; }
 
         public int UsedkWh {  get; set; }
@@ -13,6 +14,10 @@
             this.Period = period;
             this.UsedkWh = usedkWh;
             this.ProducedkWh = producedkWk;
+        }
+        public PowerUse()
+        {
+            
         }
 
     }

@@ -2,6 +2,10 @@ using WebApp.Services;
 using Microsoft.Extensions.Configuration;
 using System.IO;
 using Microsoft.EntityFrameworkCore;
+using WebApp.Services.PowerUseService;
+using Microsoft.Extensions.Configuration;
+using WebApp.Services.Interfaces;
+using WebApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +16,8 @@ builder.Services.AddSingleton<IDeviceService, DeviceService>();
 
 //builder.Services.AddTransient<IUserService, UserService>();
 
-//builder.Services.AddTransient<IPowerUseService, PowerUseService>();
+builder.Services.AddTransient<IPowerUseService, PowerUseService>();
+
 
 builder.Services.AddDbContext<DbContext>(options =>
 {

@@ -2,6 +2,9 @@ using ChartExample.Models.Chart;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Newtonsoft.Json;
+using WebApp.Models;
+using WebApp.Services.Interfaces;
+using WebApp.Services.PowerUseService;
 
 namespace WebApp.Pages.Charts
 {
@@ -12,11 +15,15 @@ namespace WebApp.Pages.Charts
         public ChartJs Chart { get; set; }
         public string ChartJson { get; set; }
 
-        private readonly ILogger<IndexModel> _logger;
+        public int FilterCriteria { get; set; }
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public List<PowerUse> PowerUse { get; private set; }
+
+        private IPowerUseService _powerService;
+
+        public IndexModel(IPowerUseService powerUseService) 
         {
-            _logger = logger;
+            this._powerService = powerUseService;
         }
 
         public void OnGet()
@@ -71,6 +78,12 @@ namespace WebApp.Pages.Charts
                 NullValueHandling = NullValueHandling.Ignore,
             });
 
+            if (FilterCriteria > 0 && FilterCriteria <= 3)
+            {
+                PowerUse = _powerService.GetPowerUseFromUserId(FilterCriteria);
+            }
+            else
+                PowerUse = _powerService.GetPowerUseFromUserId(1);
 
         }
     }
