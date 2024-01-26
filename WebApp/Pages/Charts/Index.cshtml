@@ -27,6 +27,20 @@
     </style>
 </head>
 <body>
+
+    <div>
+        <form>
+            <p>
+                Search: <select name="users" id="users" asp-for="FilterCriteria">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+                <button type="submit">Submit</button>
+            </p>
+        </form>
+    </div>
+
     <div class="text-left">
         <h1 class="display-4">
             Charts

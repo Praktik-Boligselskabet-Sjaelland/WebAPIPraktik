@@ -17,6 +17,7 @@
             Configuration = null;
             this._connectionString = connectionString;
         }
+
     }
 
 }

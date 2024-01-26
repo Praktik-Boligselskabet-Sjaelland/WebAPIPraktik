@@ -6,6 +6,7 @@ using WebApp.Services.PowerUseService;
 using Microsoft.Extensions.Configuration;
 using WebApp.Services.Interfaces;
 using WebApp.Services;
+using WebApp.Services.UserService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +15,7 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddSingleton<IDeviceService, DeviceService>();
 
-//builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<IUserService, UserService>();
 
 builder.Services.AddTransient<IPowerUseService, PowerUseService>();
 

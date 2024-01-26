@@ -19,11 +19,16 @@ namespace WebApp.Pages.Charts
 
         public List<PowerUse> PowerUse { get; private set; }
 
+        public List<User> Users { get; private set; }
+
         private IPowerUseService _powerService;
 
-        public IndexModel(IPowerUseService powerUseService) 
+        private IUserService _userService;
+
+        public IndexModel(IPowerUseService powerUseService, IUserService userService) 
         {
             this._powerService = powerUseService;
+            this._userService = userService;
         }
 
         public void OnGet()
@@ -84,6 +89,8 @@ namespace WebApp.Pages.Charts
             }
             else
                 PowerUse = _powerService.GetPowerUseFromUserId(1);
+
+            Users = _userService.GetUsers();
 
         }
     }
