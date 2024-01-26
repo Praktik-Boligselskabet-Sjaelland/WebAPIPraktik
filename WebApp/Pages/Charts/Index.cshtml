@@ -28,18 +28,16 @@
 </head>
 <body>
 
-    <div>
         <form>
             <p>
-                Search: <select name="users" id="users" asp-for="FilterCriteria">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
+                 <select name="FilterCriteria" id="FilterCriteria" asp-for="FilterCriteria">
+                    <option value="1">User 1</option>
+                    <option value="2">User 2</option>
+                    <option value="3">User 3</option>
                 </select>
-                <button type="submit">Submit</button>
+                <input type="submit" value="Submit"/>
             </p>
         </form>
-    </div>
 
     <div class="text-left">
         <h1 class="display-4">
@@ -79,6 +77,33 @@
                       <th>Difference</th>
                    </thead>
                    <tbody>
+                       @if (Model.PowerUse.Count != 0)
+                       {
+                            @foreach (var item in Model.PowerUse)
+                            {
+                                <tr>
+                                    <td>
+                                        @item.Period.Month 
+                                    </td>
+                                    <td style="color:red">
+                                        <b>
+                                          @item.UsedkWh/kWh
+                                        </b>
+                                    </td>
+                                    <td style="color:green">
+                                       <b>
+                                          @item.ProducedkWh/kWh
+                                       </b>
+                                    </td>
+                                    <td>
+                                        @(item.UsedkWh - item.ProducedkWh)/kWh
+                                    </td>
+                                </tr>
+                            }
+                       }
+                </tbody>
+
+@*                    <tbody>
                    <tr>
                        <td>December</td>
                        <td>2</td>
@@ -103,7 +128,7 @@
                        <td>3</td>
                        <td>4</td>
                    </tr>
-                   </tbody>
+                   </tbody> *@
                </table>
         </div>
     </div>

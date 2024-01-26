@@ -33,6 +33,7 @@ namespace WebApp.Pages.Charts
 
         public void OnGet()
         {
+
             // Ref: https://www.chartjs.org/docs/latest/
             var chartData = @"
         {
